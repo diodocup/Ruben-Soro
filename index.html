@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rubén Soro Esteban | Sé dueño de tu tiempo y de tu cuerpo</title>
+<meta name="description" content="Hub de autor de Rubén Soro Esteban. Dos libros sobre autonomía real: patrimonio y libertad financiera con Sé dueño de tu tiempo, y salud, fuerza y energía con Sé dueño de tu cuerpo.">
+<meta name="keywords" content="Rubén Soro Esteban, Sé dueño de tu tiempo, Sé dueño de tu cuerpo, libertad financiera, patrimonio, salud, fuerza, entrenamiento, nutrición, libros">
+<meta name="theme-color" content="#0f1713">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Rubén Soro Esteban | Sé dueño de tu tiempo y de tu cuerpo">
+<meta property="og:description" content="Dos libros, una misma idea: nadie va a venir a rescatarte. Recupera tu tiempo y tu cuerpo.">
+<meta property="og:image" content="assets/cover-se-dueno-de-tu-tiempo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0f1713;
+    --bg-2:#0b110e;
+    --panel:#16211b;
+    --panel-2:#1b2820;
+    --line:rgba(214,228,214,.12);
+    --ink:#eef3ec;
+    --ink-soft:#b9c6ba;
+    --ink-dim:#8a9a8c;
+    --gold:#d9a441;
+    --gold-soft:#e6c485;
+    --sage:#7faf7e;
+    --sage-soft:#a9cda4;
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(900px 600px at 78% -8%, rgba(217,164,65,.10), transparent 60%),
+      radial-gradient(800px 600px at -5% 100%, rgba(127,175,126,.10), transparent 55%);
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:2}
+  a{color:inherit;text-decoration:none}
+
+  nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(12px);
+    background:rgba(15,23,19,.72);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{
+    font-family:"Fraunces",serif;font-weight:500;font-size:1.05rem;letter-spacing:.2px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-size:.9rem;color:var(--ink-soft);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{
+    border:1px solid var(--line);padding:9px 16px;border-radius:999px;
+    font-size:.85rem;color:var(--ink);transition:all .25s;
+  }
+  .nav-cta:hover{background:var(--gold);color:#1a1205;border-color:var(--gold)}
+  @media(max-width:760px){.nav-links a:not(.nav-cta){display:none}.nav-links{gap:12px}}
+
+  header{padding:84px 0 56px;position:relative}
+  .eyebrow{
+    font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);
+    display:flex;align-items:center;gap:14px;margin-bottom:26px;
+  }
+  .eyebrow::before{content:"";width:42px;height:1px;background:var(--gold)}
+  h1.title{
+    font-family:"Fraunces",serif;font-weight:400;
+    font-size:clamp(2.6rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.01em;
+  }
+  h1.title .accent{font-style:italic;color:var(--gold-soft)}
+  .lede{
+    margin-top:28px;max-width:650px;font-size:clamp(1.05rem,2.2vw,1.3rem);
+    color:var(--ink-soft);
+  }
+  .lede strong{color:var(--ink);font-weight:600}
+  .hero-meta{
+    margin-top:38px;display:flex;flex-wrap:wrap;gap:14px 36px;align-items:center;
+    font-size:.92rem;color:var(--ink-dim);
+  }
+  .hero-meta b{color:var(--ink);font-weight:600}
+
+  .reveal{opacity:0;transform:translateY(18px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.28s}.d4{animation-delay:.4s}
+
+  .section-head{margin:0 0 40px}
+  .section-head .kicker{
+    font-size:.76rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:14px;
+  }
+  .section-head h2{
+    font-family:"Fraunces",serif;font-weight:400;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;
+  }
+  #libros{padding:34px 0 20px}
+  .books{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:860px){.books{grid-template-columns:1fr}}
+  .book{
+    position:relative;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+    background:linear-gradient(180deg,var(--panel),var(--bg-2));
+    padding:32px;display:flex;flex-direction:column;gap:22px;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s;
+  }
+  .book::before{
+    content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background:radial-gradient(380px 240px at 100% 0%, var(--tint,transparent), transparent 70%);
+  }
+  .book:hover{transform:translateY(-6px);border-color:var(--tint-line);box-shadow:0 24px 60px -30px rgba(0,0,0,.8)}
+  .book--tiempo{--tint:rgba(217,164,65,.16);--tint-line:rgba(217,164,65,.4);--book-accent:var(--gold-soft)}
+  .book--cuerpo{--tint:rgba(127,175,126,.16);--tint-line:rgba(127,175,126,.42);--book-accent:var(--sage-soft)}
+  .book-top{display:flex;gap:22px;align-items:flex-start;position:relative;z-index:2}
+  .cover{
+    width:118px;flex:0 0 118px;aspect-ratio:992/1586;border-radius:8px;
+    overflow:hidden;background:rgba(255,255,255,.03);
+    box-shadow:0 18px 40px -16px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.05);
+  }
+  .cover img{display:block;width:100%;height:100%;object-fit:cover}
+  .book-tag{
+    font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--book-accent);margin-bottom:10px;font-weight:600;
+  }
+  .book h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.6rem;line-height:1.1}
+  .book p{color:var(--ink-soft);font-size:.98rem;margin-top:12px}
+  .book-actions{display:flex;flex-wrap:wrap;gap:12px;position:relative;z-index:2;margin-top:auto}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-size:.92rem;font-weight:600;
+    padding:12px 20px;border-radius:999px;transition:all .25s;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--book-accent);color:#13180f}
+  .btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .btn-ghost{border-color:var(--line);color:var(--ink-soft)}
+  .btn-ghost:hover{border-color:var(--ink-soft);color:var(--ink)}
+
+  #serie{padding:96px 0 76px}
+  .serie-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  @media(max-width:860px){.serie-grid{grid-template-columns:1fr;gap:30px}}
+  .serie-quote{
+    font-family:"Fraunces",serif;font-weight:400;font-style:italic;
+    font-size:clamp(1.6rem,3.6vw,2.5rem);line-height:1.22;
+  }
+  .serie-quote span{color:var(--gold-soft)}
+  .serie-body p{color:var(--ink-soft);margin-bottom:18px;font-size:1.05rem}
+  .serie-body p:last-child{margin-bottom:0}
+  .serie-body strong{color:var(--ink);font-weight:600}
+
+  #contacto{padding:18px 0 96px}
+  .contact-panel{
+    border:1px solid var(--line);border-radius:24px;padding:clamp(32px,5vw,60px);
+    background:
+      radial-gradient(600px 300px at 90% 0%, rgba(217,164,65,.1), transparent 60%),
+      linear-gradient(180deg,var(--panel-2),var(--bg-2));
+    position:relative;overflow:hidden;
+  }
+  .contact-panel .kicker{font-size:.76rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:16px}
+  .contact-panel h2{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.12;max-width:720px}
+  .contact-panel p{color:var(--ink-soft);margin-top:16px;max-width:620px}
+  .contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .contact-actions a{
+    border:1px solid var(--line);padding:13px 20px;border-radius:999px;
+    font-size:.92rem;font-weight:700;color:var(--ink-soft);transition:all .25s;
+  }
+  .contact-actions a:first-child{background:var(--gold);border-color:var(--gold);color:#1a1205}
+  .contact-actions a:hover{transform:translateY(-1px);border-color:var(--gold);color:var(--ink)}
+  .contact-actions a:first-child:hover{color:#1a1205;filter:brightness(1.07)}
+
+  #autor{padding:30px 0 90px}
+  .author{
+    display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:center;
+    border-top:1px solid var(--line);padding-top:70px;
+  }
+  @media(max-width:760px){.author{grid-template-columns:1fr;gap:28px}}
+  .author-name{font-family:"Fraunces",serif;font-size:2.2rem;font-weight:400;line-height:1.1}
+  .author-role{color:var(--gold-soft);font-size:.9rem;letter-spacing:.04em;margin-top:8px}
+  .author-photo{
+    aspect-ratio:4/5;border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(150deg,var(--panel),var(--bg-2));
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Fraunces",serif;font-size:4rem;color:rgba(217,164,65,.3);
+  }
+  .author-bio p{color:var(--ink-soft);margin-bottom:16px}
+  .author-bio strong{color:var(--ink);font-weight:600}
+  .socials{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
+  .socials a{
+    border:1px solid var(--line);padding:10px 18px;border-radius:999px;
+    font-size:.88rem;color:var(--ink-soft);transition:all .25s;
+  }
+  .socials a:hover{border-color:var(--gold);color:var(--ink)}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;background:var(--bg-2);position:relative;z-index:2}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--ink-dim)}
+  .foot-in a{color:var(--ink-soft)}
+  .foot-in a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><span class="dot"></span>Rubén Soro Esteban</a>
+    <div class="nav-links">
+      <a href="#libros">Los libros</a>
+      <a href="#serie">La idea</a>
+      <a href="#autor">Sobre el autor</a>
+      <a href="#contacto" class="nav-cta">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<a id="top"></a>
+<header>
+  <div class="wrap">
+    <div class="eyebrow reveal d1">La serie · Sé dueño de tu...</div>
+    <h1 class="title reveal d2">Recupera tu <span class="accent">tiempo</span>.<br>Recupera tu <span class="accent">cuerpo</span>.</h1>
+    <p class="lede reveal d3">Dos libros, una misma idea incómoda: <strong>nadie va a venir a rescatarte</strong>. Ni con tu dinero, ni con tu salud. Pero las reglas son más simples de lo que te han hecho creer.</p>
+    <div class="hero-meta reveal d4">
+      <span><b>2</b> libros publicados</span>
+      <span><b>Finanzas</b> &amp; <b>salud</b></span>
+      <span>Sin humo. Aplicable hoy.</span>
+    </div>
+  </div>
+</header>
+
+<section id="libros">
+  <div class="wrap">
+    <div class="section-head reveal d1">
+      <div class="kicker">Los libros</div>
+      <h2>Empieza por el que más necesites hoy</h2>
+    </div>
+    <div class="books">
+      <article class="book book--tiempo reveal d2">
+        <div class="book-top">
+          <div class="cover">
+            <img src="assets/cover-tiempo-card.jpg" alt="Portada de Sé dueño de tu tiempo" width="118" height="189" loading="eager" decoding="async">
+          </div>
+          <div>
+            <div class="book-tag">Inversión &amp; patrimonio</div>
+            <h3>Sé dueño de tu tiempo</h3>
+            <p>Cómo convertir tu salario en patrimonio con vivienda, inversión indexada y activos reales. No se trata de ganar más, sino de dejar de depender del siguiente sueldo.</p>
+          </div>
+        </div>
+        <div class="book-actions">
+          <a class="btn btn-primary" href="https://diodocup.github.io/seduenodetutiempo/" target="_blank" rel="noopener">Ver la web</a>
+          <a class="btn btn-ghost" href="https://www.amazon.es/DUE%C3%91O-TIEMPO-convertir-patrimonio-inversi%C3%B3n-ebook/dp/B0GKSF97GS" target="_blank" rel="noopener">Comprar en Amazon</a>
+        </div>
+      </article>
+
+      <article class="book book--cuerpo reveal d3">
+        <div class="book-top">
+          <div class="cover">
+            <img src="assets/cover-cuerpo-card.jpg" alt="Portada de Sé dueño de tu cuerpo" width="118" height="189" loading="eager" decoding="async">
+          </div>
+          <div>
+            <div class="book-tag">Salud, fuerza &amp; energía</div>
+            <h3>Sé dueño de tu cuerpo</h3>
+            <p>Mentalidad, entrenamiento, nutrición y sueño para construir un cuerpo fuerte, sano y duradero. Principios sencillos, sostenibles y repetidos durante años.</p>
+          </div>
+        </div>
+        <div class="book-actions">
+          <a class="btn btn-primary" href="https://diodocup.github.io/seduenodetucuerpo/" target="_blank" rel="noopener">Ver la web</a>
+          <a class="btn btn-ghost" href="https://amzn.eu/d/0cNucJey" target="_blank" rel="noopener">Comprar en Amazon</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="serie">
+  <div class="wrap serie-grid">
+    <blockquote class="serie-quote reveal d1">"Tu tiempo no sirve de nada si no tienes <span>cuerpo</span> para vivirlo."</blockquote>
+    <div class="serie-body reveal d2">
+      <p>Los dos libros son la misma idea vista desde dos ángulos: <strong>autonomía real sobre tu propia vida</strong>.</p>
+      <p>Uno te ayuda a convertir tu esfuerzo en patrimonio para recuperar margen y dejar de vender siempre tu tiempo. El otro te ayuda a construir el cuerpo con el que disfrutar ese tiempo durante décadas.</p>
+      <p>El dinero sin salud es un saldo que no podrás gastar. La salud sin libertad es energía malgastada en sobrevivir. <strong>Hacen falta los dos.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="contact-panel reveal d1">
+      <div class="kicker">Contacto</div>
+      <h2>Libros, entrevistas, consultas o simplemente seguir el trabajo</h2>
+      <p>Estas son las vías principales para contactar conmigo o seguir novedades sobre los libros, recursos descargables y próximos proyectos.</p>
+      <div class="contact-actions">
+        <a href="mailto:rsoroesteban@gmail.com?subject=Consulta%20sobre%20los%20libros%20de%20Rub%C3%A9n%20Soro">Enviar email</a>
+        <a href="https://www.instagram.com/rubensoro.libertad/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://es.linkedin.com/in/ruben-soro-esteban-34328484" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="autor">
+  <div class="wrap">
+    <div class="author">
+      <div>
+        <div class="author-photo reveal d1">RS</div>
+      </div>
+      <div class="author-bio reveal d2">
+        <div class="author-name">Rubén Soro Esteban</div>
+        <div class="author-role">Ingeniero industrial · Directivo en energías renovables · Autor</div>
+        <p style="margin-top:22px">Director de ingeniería, construcción y compras, con experiencia directa en <strong>inversión, riesgo, financiación y creación de valor a largo plazo</strong>. Antes, director de gestión de activos.</p>
+        <p>En sus libros traslada esa mirada de responsabilidad personal a dos terrenos donde casi todo el mundo delega: <strong>el dinero y el cuerpo</strong>. Su enfoque parte de una idea clara: el dinero y la salud no son fines en sí mismos, sino herramientas para recuperar tiempo, autonomía y capacidad de decisión sobre tu propia vida.</p>
+        <p>Además de su trayectoria profesional, es <strong>aficionado al fitness</strong> y lleva <strong>15 años entrenando</strong>, una experiencia que atraviesa su forma de hablar de constancia, hábitos, fuerza y salud a largo plazo.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/rubensoro.libertad/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://es.linkedin.com/in/ruben-soro-esteban-34328484" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:rsoroesteban@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© <span id="yr"></span> Rubén Soro Esteban</span>
+    <span>
+      <a href="https://diodocup.github.io/seduenodetutiempo/" target="_blank" rel="noopener">Sé dueño de tu tiempo</a> ·
+      <a href="https://diodocup.github.io/seduenodetucuerpo/" target="_blank" rel="noopener">Sé dueño de tu cuerpo</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
