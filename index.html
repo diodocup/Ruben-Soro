@@ -6,13 +6,58 @@
 <title>Rubén Soro Esteban | Sé dueño de tu tiempo y de tu cuerpo</title>
 <meta name="description" content="Hub de autor de Rubén Soro Esteban. Dos libros sobre autonomía real: patrimonio y libertad financiera con Sé dueño de tu tiempo, y salud, fuerza y energía con Sé dueño de tu cuerpo.">
 <meta name="keywords" content="Rubén Soro Esteban, Sé dueño de tu tiempo, Sé dueño de tu cuerpo, libertad financiera, patrimonio, salud, fuerza, entrenamiento, nutrición, libros">
+<meta name="author" content="Rubén Soro Esteban">
 <meta name="theme-color" content="#0f1713">
+<link rel="canonical" href="https://rubensoro.es/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://rubensoro.es/">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Rubén Soro Esteban | Sé dueño de tu tiempo y de tu cuerpo">
 <meta property="og:description" content="Dos libros, una misma idea: nadie va a venir a rescatarte. Recupera tu tiempo y tu cuerpo.">
-<meta property="og:image" content="assets/cover-se-dueno-de-tu-tiempo.jpg">
+<meta property="og:image" content="https://rubensoro.es/assets/cover-se-dueno-de-tu-tiempo.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rubén Soro Esteban | Sé dueño de tu tiempo y de tu cuerpo">
+<meta name="twitter:description" content="Dos libros, una misma idea: nadie va a venir a rescatarte. Recupera tu tiempo y tu cuerpo.">
+<meta name="twitter:image" content="https://rubensoro.es/assets/cover-se-dueno-de-tu-tiempo.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://rubensoro.es/#person",
+      "name": "Rubén Soro Esteban",
+      "url": "https://rubensoro.es/",
+      "jobTitle": "Autor · Ingeniero industrial · Directivo en energías renovables",
+      "description": "Autor de 'Sé dueño de tu tiempo' y 'Sé dueño de tu cuerpo'. Escribe sobre autonomía real: patrimonio, libertad financiera, salud y fuerza.",
+      "sameAs": [
+        "https://www.instagram.com/rubensoro.libertad/",
+        "https://es.linkedin.com/in/ruben-soro-esteban-34328484"
+      ]
+    },
+    {
+      "@type": "Book",
+      "name": "Sé dueño de tu tiempo",
+      "author": {"@id": "https://rubensoro.es/#person"},
+      "url": "https://diodocup.github.io/seduenodetutiempo/",
+      "inLanguage": "es",
+      "genre": "Finanzas personales",
+      "description": "Cómo convertir tu salario en patrimonio con vivienda, inversión indexada y activos reales."
+    },
+    {
+      "@type": "Book",
+      "name": "Sé dueño de tu cuerpo",
+      "author": {"@id": "https://rubensoro.es/#person"},
+      "url": "https://diodocup.github.io/seduenodetucuerpo/",
+      "inLanguage": "es",
+      "genre": "Salud y bienestar",
+      "description": "Mentalidad, entrenamiento, nutrición y sueño para construir un cuerpo fuerte, sano y duradero."
+    }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -189,14 +234,17 @@
     border-top:1px solid var(--line);padding-top:70px;
   }
   @media(max-width:760px){.author{grid-template-columns:1fr;gap:28px}}
-  .author-name{font-family:"Fraunces",serif;font-size:2.2rem;font-weight:400;line-height:1.1}
+  .author-name{font-family:"Fraunces",serif;font-size:2.2rem;font-weight:400;line-height:1.1;margin:0}
   .author-role{color:var(--gold-soft);font-size:.9rem;letter-spacing:.04em;margin-top:8px}
   .author-photo{
     aspect-ratio:4/5;border-radius:18px;border:1px solid var(--line);
     background:linear-gradient(150deg,var(--panel),var(--bg-2));
     display:flex;align-items:center;justify-content:center;
     font-family:"Fraunces",serif;font-size:4rem;color:rgba(217,164,65,.3);
+    overflow:hidden;position:relative;
   }
+  .author-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+  .author-photo span{position:relative;z-index:1}
   .author-bio p{color:var(--ink-soft);margin-bottom:16px}
   .author-bio strong{color:var(--ink);font-weight:600}
   .socials{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
@@ -314,10 +362,10 @@
   <div class="wrap">
     <div class="author">
       <div>
-        <div class="author-photo reveal d1">RS</div>
+        <div class="author-photo reveal d1"><span>RS</span></div>
       </div>
       <div class="author-bio reveal d2">
-        <div class="author-name">Rubén Soro Esteban</div>
+        <h2 class="author-name">Rubén Soro Esteban</h2>
         <div class="author-role">Ingeniero industrial · Directivo en energías renovables · Autor</div>
         <p style="margin-top:22px">Director de ingeniería, construcción y compras, con experiencia directa en <strong>inversión, riesgo, financiación y creación de valor a largo plazo</strong>. Antes, director de gestión de activos.</p>
         <p>En sus libros traslada esa mirada de responsabilidad personal a dos terrenos donde casi todo el mundo delega: <strong>el dinero y el cuerpo</strong>. Su enfoque parte de una idea clara: el dinero y la salud no son fines en sí mismos, sino herramientas para recuperar tiempo, autonomía y capacidad de decisión sobre tu propia vida.</p>
