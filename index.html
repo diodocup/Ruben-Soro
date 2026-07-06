@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rubén Soro Esteban | Sé dueño de tu tiempo y de tu cuerpo</title>
-<meta name="description" content="Hub de autor de Rubén Soro Esteban. Dos libros sobre autonomía real: patrimonio y libertad financiera con Sé dueño de tu tiempo, y salud, fuerza y energía con Sé dueño de tu cuerpo.">
-<meta name="keywords" content="Rubén Soro Esteban, Sé dueño de tu tiempo, Sé dueño de tu cuerpo, libertad financiera, patrimonio, salud, fuerza, entrenamiento, nutrición, libros">
+<meta name="description" content="Web oficial de Rubén Soro Esteban: los libros Sé dueño de tu tiempo y Sé dueño de tu cuerpo, y TrueLift, la app que diseña tu entrenamiento y tu sobrecarga progresiva según tu rendimiento y tu recuperación.">
+<meta name="keywords" content="Rubén Soro Esteban, Sé dueño de tu tiempo, Sé dueño de tu cuerpo, TrueLift, app de entrenamiento, sobrecarga progresiva, libertad financiera, patrimonio, salud, fuerza, entrenamiento, nutrición, libros">
 <meta name="author" content="Rubén Soro Esteban">
 <meta name="theme-color" content="#0f1713">
 <link rel="canonical" href="https://rubensoro.es/">
@@ -14,11 +14,11 @@
 <meta property="og:url" content="https://rubensoro.es/">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Rubén Soro Esteban | Sé dueño de tu tiempo y de tu cuerpo">
-<meta property="og:description" content="Dos libros, una misma idea: nadie va a venir a rescatarte. Recupera tu tiempo y tu cuerpo.">
+<meta property="og:description" content="Dos libros y una app, una misma idea: nadie va a venir a rescatarte. Recupera tu tiempo y tu cuerpo.">
 <meta property="og:image" content="https://rubensoro.es/assets/cover-se-dueno-de-tu-tiempo.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rubén Soro Esteban | Sé dueño de tu tiempo y de tu cuerpo">
-<meta name="twitter:description" content="Dos libros, una misma idea: nadie va a venir a rescatarte. Recupera tu tiempo y tu cuerpo.">
+<meta name="twitter:description" content="Dos libros y una app, una misma idea: nadie va a venir a rescatarte. Recupera tu tiempo y tu cuerpo.">
 <meta name="twitter:image" content="https://rubensoro.es/assets/cover-se-dueno-de-tu-tiempo.jpg">
 
 <script type="application/ld+json">
@@ -32,7 +32,7 @@
       "url": "https://rubensoro.es/",
       "image": "https://rubensoro.es/assets/photo-ruben-soro.jpg",
       "jobTitle": "Autor · Ingeniero industrial · Directivo en energías renovables",
-      "description": "Autor de 'Sé dueño de tu tiempo' y 'Sé dueño de tu cuerpo'. Escribe sobre autonomía real: patrimonio, libertad financiera, salud y fuerza.",
+      "description": "Autor de 'Sé dueño de tu tiempo' y 'Sé dueño de tu cuerpo' y creador de TrueLift, la app de entrenamiento con progresión automática. Escribe sobre autonomía real: patrimonio, libertad financiera, salud y fuerza.",
       "sameAs": [
         "https://www.instagram.com/rubensoro.seduenodetuvida/",
         "https://es.linkedin.com/in/ruben-soro-esteban-34328484"
@@ -55,6 +55,14 @@
       "inLanguage": "es",
       "genre": "Salud y bienestar",
       "description": "Mentalidad, entrenamiento, nutrición y sueño para construir un cuerpo fuerte, sano y duradero."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "TrueLift",
+      "url": "https://www.truelift.es/",
+      "applicationCategory": "HealthApplication",
+      "author": {"@id": "https://rubensoro.es/#person"},
+      "description": "App de entrenamiento que diseña tu rutina y tu sobrecarga progresiva en función de tu rendimiento y tu recuperación: decide cuándo subir peso, cuándo mantener y cuándo descargar."
     }
   ]
 }
@@ -78,10 +86,14 @@
     --gold-soft:#e6c485;
     --sage:#7faf7e;
     --sage-soft:#a9cda4;
+    --lift:#6fc4bb;
+    --lift-soft:#a3ded6;
     --maxw:1140px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
   body{
     background:var(--bg);
     color:var(--ink);
@@ -147,9 +159,16 @@
   }
   .hero-meta b{color:var(--ink);font-weight:600}
 
-  .reveal{opacity:0;transform:translateY(18px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
-  @keyframes rise{to{opacity:1;transform:none}}
-  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.28s}.d4{animation-delay:.4s}
+  .reveal{opacity:1;transform:none}
+  html.js .reveal{
+    opacity:0;transform:translateY(18px);
+    transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);
+  }
+  html.js .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.05s}.d2{transition-delay:.16s}.d3{transition-delay:.28s}.d4{transition-delay:.4s}
+  @media(prefers-reduced-motion:reduce){
+    html.js .reveal{opacity:1;transform:none;transition:none}
+  }
 
   .section-head{margin:0 0 40px}
   .section-head .kicker{
@@ -196,6 +215,56 @@
   .btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
   .btn-ghost{border-color:var(--line);color:var(--ink-soft)}
   .btn-ghost:hover{border-color:var(--ink-soft);color:var(--ink)}
+
+  #truelift{padding:96px 0 10px}
+  .app-panel{
+    position:relative;overflow:hidden;
+    border:1px solid rgba(111,196,187,.24);border-radius:24px;
+    padding:clamp(32px,5vw,60px);
+    background:
+      radial-gradient(720px 400px at 88% -12%, rgba(111,196,187,.14), transparent 62%),
+      radial-gradient(500px 320px at -6% 110%, rgba(217,164,65,.06), transparent 60%),
+      linear-gradient(180deg,var(--panel-2),var(--bg-2));
+  }
+  .app-badge{
+    display:inline-flex;align-items:center;gap:9px;
+    border:1px solid rgba(111,196,187,.35);border-radius:999px;
+    padding:7px 15px;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--lift-soft);margin-bottom:22px;font-weight:600;
+  }
+  .app-badge .pulse{
+    width:7px;height:7px;border-radius:50%;background:var(--lift);
+    box-shadow:0 0 0 0 rgba(111,196,187,.5);animation:pulse 2.2s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(111,196,187,.5)}
+    70%{box-shadow:0 0 0 9px rgba(111,196,187,0)}
+    100%{box-shadow:0 0 0 0 rgba(111,196,187,0)}
+  }
+  @media(prefers-reduced-motion:reduce){.app-badge .pulse{animation:none}}
+  .app-panel h2{
+    font-family:"Fraunces",serif;font-weight:400;
+    font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.08;max-width:760px;
+  }
+  .app-panel h2 em{font-style:italic;color:var(--lift-soft)}
+  .app-tagline{
+    margin-top:20px;max-width:680px;font-size:clamp(1.02rem,2.1vw,1.18rem);color:var(--ink-soft);
+  }
+  .app-tagline strong{color:var(--ink);font-weight:600}
+  .app-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;
+  }
+  @media(max-width:820px){.app-grid{grid-template-columns:1fr}}
+  .app-feature{
+    border:1px solid var(--line);border-radius:16px;padding:20px 22px;
+    background:rgba(255,255,255,.02);transition:border-color .3s,background .3s;
+  }
+  .app-feature:hover{border-color:rgba(111,196,187,.4);background:rgba(111,196,187,.04)}
+  .app-feature h3{font-size:1rem;font-weight:700;color:var(--lift-soft);margin-bottom:8px}
+  .app-feature p{font-size:.92rem;color:var(--ink-soft)}
+  .app-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+  .btn-lift{background:var(--lift);color:#0c1614}
+  .btn-lift:hover{filter:brightness(1.08);transform:translateY(-1px)}
 
   #serie{padding:96px 0 76px}
   .serie-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
@@ -260,6 +329,7 @@
   .foot-in a{color:var(--ink-soft)}
   .foot-in a:hover{color:var(--ink)}
 </style>
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -268,6 +338,7 @@
     <a href="#top" class="brand"><span class="dot"></span>Rubén Soro Esteban</a>
     <div class="nav-links">
       <a href="#libros">Los libros</a>
+      <a href="#truelift">TrueLift</a>
       <a href="#serie">La idea</a>
       <a href="#autor">Sobre el autor</a>
       <a href="#contacto" class="nav-cta">Contacto</a>
@@ -283,7 +354,7 @@
     <p class="lede reveal d3">Dos libros, una misma idea incómoda: <strong>nadie va a venir a rescatarte</strong>. Ni con tu dinero, ni con tu salud. Pero las reglas son más simples de lo que te han hecho creer.</p>
     <div class="hero-meta reveal d4">
       <span><b>2</b> libros publicados</span>
-      <span><b>Finanzas</b> &amp; <b>salud</b></span>
+      <span><b>TrueLift</b> · la app, muy pronto</span>
       <span>Sin humo. Aplicable hoy.</span>
     </div>
   </div>
@@ -333,6 +404,34 @@
   </div>
 </section>
 
+<section id="truelift">
+  <div class="wrap">
+    <div class="app-panel reveal d1">
+      <div class="app-badge"><span class="pulse"></span>Muy pronto · App de entrenamiento</div>
+      <h2>TrueLift. Tú entrenas: <em>él decide</em> cuándo subir peso, cuándo mantener y cuándo descargar.</h2>
+      <p class="app-tagline">TrueLift diseña tu entrenamiento y tu <strong>sobrecarga progresiva</strong> en función de tu <strong>rendimiento</strong> y tu <strong>recuperación</strong>. Es el método de <em>Sé dueño de tu cuerpo</em> convertido en herramienta: entra al gimnasio sabiendo exactamente qué toca hoy.</p>
+      <div class="app-grid">
+        <div class="app-feature">
+          <h3>Progresión inteligente</h3>
+          <p>Decide cuándo subir peso y cuándo mantener a partir de lo que registras en cada sesión, no de una plantilla fija.</p>
+        </div>
+        <div class="app-feature">
+          <h3>Ajustado a tu recuperación</h3>
+          <p>La carga se adapta a tu rendimiento real. Si tu cuerpo no llega, el plan lo sabe antes de que te estanques.</p>
+        </div>
+        <div class="app-feature">
+          <h3>Descargas cuando tocan</h3>
+          <p>Programa las semanas de descarga en el momento adecuado para seguir progresando durante años, no semanas.</p>
+        </div>
+      </div>
+      <div class="app-actions">
+        <a class="btn btn-lift" href="https://www.truelift.es" target="_blank" rel="noopener">Visitar truelift.es</a>
+        <a class="btn btn-ghost" href="#contacto">Avisadme del lanzamiento</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="serie">
   <div class="wrap serie-grid">
     <blockquote class="serie-quote reveal d1">"Tu tiempo no sirve de nada si no tienes <span>cuerpo</span> para vivirlo."</blockquote>
@@ -349,7 +448,7 @@
     <div class="contact-panel reveal d1">
       <div class="kicker">Contacto</div>
       <h2>Libros, entrevistas, consultas o simplemente seguir el trabajo</h2>
-      <p>Estas son las vías principales para contactar conmigo o seguir novedades sobre los libros, recursos descargables y próximos proyectos.</p>
+      <p>Estas son las vías principales para contactar conmigo o seguir novedades sobre los libros, el lanzamiento de TrueLift, recursos descargables y próximos proyectos.</p>
       <div class="contact-actions">
         <a href="mailto:rsoroesteban@gmail.com?subject=Consulta%20sobre%20los%20libros%20de%20Rub%C3%A9n%20Soro">Enviar email</a>
         <a href="https://www.instagram.com/rubensoro.seduenodetuvida/" target="_blank" rel="noopener">Instagram</a>
@@ -369,10 +468,10 @@
       </div>
       <div class="author-bio reveal d2">
         <h2 class="author-name">Rubén Soro Esteban</h2>
-        <div class="author-role">Ingeniero industrial · Directivo en energías renovables · Autor</div>
+        <div class="author-role">Ingeniero industrial · Directivo en energías renovables · Autor · Creador de TrueLift</div>
         <p style="margin-top:22px">Director de ingeniería, construcción y compras, con experiencia directa en <strong>inversión, riesgo, financiación y creación de valor a largo plazo</strong>. Antes, director de gestión de activos.</p>
         <p>En sus libros traslada esa mirada de responsabilidad personal a dos terrenos donde casi todo el mundo delega: <strong>el dinero y el cuerpo</strong>. Su enfoque parte de una idea clara: el dinero y la salud no son fines en sí mismos, sino herramientas para recuperar tiempo, autonomía y capacidad de decisión sobre tu propia vida.</p>
-        <p>Además de su trayectoria profesional, es <strong>aficionado al fitness</strong> y lleva <strong>15 años entrenando</strong>, una experiencia que atraviesa su forma de hablar de constancia, hábitos, fuerza y salud a largo plazo.</p>
+        <p>Además de su trayectoria profesional, lleva <strong>15 años entrenando</strong>, una experiencia que atraviesa su forma de hablar de constancia, hábitos, fuerza y salud a largo plazo — y que ahora se materializa en <strong>TrueLift</strong>, su app de entrenamiento con progresión automática.</p>
         <div class="socials">
           <a href="https://www.instagram.com/rubensoro.seduenodetuvida/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://es.linkedin.com/in/ruben-soro-esteban-34328484" target="_blank" rel="noopener">LinkedIn</a>
@@ -389,7 +488,7 @@
     <span>
       <a href="https://diodocup.github.io/seduenodetutiempo/" target="_blank" rel="noopener">Sé dueño de tu tiempo</a> ·
       <a href="https://diodocup.github.io/seduenodetucuerpo/" target="_blank" rel="noopener">Sé dueño de tu cuerpo</a> ·
-      <a href="https://www.truelift.com" target="_blank" rel="noopener">Truelift</a> ·
+      <a href="https://www.truelift.es" target="_blank" rel="noopener">TrueLift</a> ·
       <a href="/privacidad.html">Privacidad</a> ·
       <a href="/aviso-legal.html">Aviso legal</a>
     </span>
@@ -398,6 +497,21 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
 </script>
 
 </body>
