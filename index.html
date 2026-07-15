@@ -242,6 +242,18 @@
     100%{box-shadow:0 0 0 0 rgba(111,196,187,0)}
   }
   @media(prefers-reduced-motion:reduce){.app-badge .pulse{animation:none}}
+  .app-intro{
+    display:grid;grid-template-columns:minmax(0,1fr) clamp(180px,22vw,250px);
+    gap:clamp(28px,5vw,64px);align-items:center;
+  }
+  .app-icon{
+    display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:22%;
+    box-shadow:0 24px 56px -20px rgba(0,0,0,.9),0 0 34px rgba(159,230,31,.12);
+  }
+  @media(max-width:720px){
+    .app-intro{grid-template-columns:1fr}
+    .app-icon{width:min(210px,62vw);margin:0 auto}
+  }
   .app-panel h2{
     font-family:"Fraunces",serif;font-weight:400;
     font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.08;max-width:760px;
@@ -419,10 +431,15 @@
 <section id="truelift">
   <div class="wrap">
     <div class="app-panel reveal d1">
-      <div class="app-badge"><span class="pulse"></span>App de entrenamiento</div>
-      <h2>TrueLift</h2>
-      <p class="app-claim"><em>Tú entrenas.</em> TrueLift programa.</p>
-      <p class="app-tagline">Tu sobrecarga progresiva, automatizada e inteligente. TrueLift diseña tu progresión en función de tu rendimiento y recuperación real, no de una plantilla fija.</p>
+      <div class="app-intro">
+        <div>
+          <div class="app-badge"><span class="pulse"></span>App de entrenamiento</div>
+          <h2>TrueLift</h2>
+          <p class="app-claim"><em>Tú entrenas.</em> TrueLift programa.</p>
+          <p class="app-tagline">Tu sobrecarga progresiva, automatizada e inteligente. TrueLift diseña tu progresión en función de tu rendimiento y recuperación real, no de una plantilla fija.</p>
+        </div>
+        <img class="app-icon" src="assets/icono-pro.webp" width="512" height="512" alt="Icono de TrueLift PRO" loading="lazy" decoding="async">
+      </div>
       <div class="app-grid">
         <div class="app-feature">
           <h3>Un verdadero entrenador en tu bolsillo</h3>
