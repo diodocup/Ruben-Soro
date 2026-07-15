@@ -247,6 +247,10 @@
     font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.08;max-width:760px;
   }
   .app-panel h2 em{font-style:italic;color:var(--lift-soft)}
+  .app-claim{
+    margin-top:12px;font-family:"Fraunces",serif;font-size:clamp(1.5rem,3vw,2.15rem);line-height:1.15;
+  }
+  .app-claim em{font-style:italic;color:var(--lift-soft)}
   .app-tagline{
     margin-top:20px;max-width:680px;font-size:clamp(1.02rem,2.1vw,1.18rem);color:var(--ink-soft);
   }
@@ -262,6 +266,14 @@
   .app-feature:hover{border-color:rgba(111,196,187,.4);background:rgba(111,196,187,.04)}
   .app-feature h3{font-size:1rem;font-weight:700;color:var(--lift-soft);margin-bottom:8px}
   .app-feature p{font-size:.92rem;color:var(--ink-soft)}
+  .app-access{
+    margin-top:14px;border:1px solid var(--line);border-radius:16px;padding:22px;
+    background:rgba(255,255,255,.02);
+  }
+  .app-access h3{font-size:1rem;font-weight:700;color:var(--lift-soft);margin-bottom:12px}
+  .app-access ul{display:grid;gap:9px;padding-left:20px;color:var(--ink-soft)}
+  .app-access li::marker{color:var(--lift)}
+  .app-access strong{color:var(--ink);font-weight:600}
   .app-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
   .btn-lift{background:var(--lift);color:#0c1614}
   .btn-lift:hover{filter:brightness(1.08);transform:translateY(-1px)}
@@ -407,22 +419,31 @@
 <section id="truelift">
   <div class="wrap">
     <div class="app-panel reveal d1">
-      <div class="app-badge"><span class="pulse"></span>Muy pronto · App de entrenamiento</div>
-      <h2>TrueLift. Tú entrenas: <em>él decide</em> cuándo subir peso, cuándo mantener y cuándo descargar.</h2>
-      <p class="app-tagline">TrueLift diseña tu entrenamiento y tu <strong>sobrecarga progresiva</strong> en función de tu <strong>rendimiento</strong> y tu <strong>recuperación</strong>. Es el método de <em>Sé dueño de tu cuerpo</em> convertido en herramienta: entra al gimnasio sabiendo exactamente qué toca hoy.</p>
+      <div class="app-badge"><span class="pulse"></span>App de entrenamiento</div>
+      <h2>TrueLift</h2>
+      <p class="app-claim">Tú entrenas. <em>Ella programa.</em></p>
+      <p class="app-tagline">Tu sobrecarga progresiva, automatizada e inteligente. TrueLift diseña tu progresión en función de tu rendimiento y recuperación real, no de una plantilla fija.</p>
       <div class="app-grid">
         <div class="app-feature">
-          <h3>Progresión inteligente</h3>
-          <p>Decide cuándo subir peso y cuándo mantener a partir de lo que registras en cada sesión, no de una plantilla fija.</p>
+          <h3>Un verdadero entrenador en tu bolsillo</h3>
+          <p>Entra al gimnasio y céntrate únicamente en esforzarte. Registra tus series y deja que TrueLift se ocupe de calcular el resto: cuándo subir peso, cuándo mantenerlo y cuándo descargar.</p>
         </div>
         <div class="app-feature">
-          <h3>Ajustado a tu recuperación</h3>
-          <p>La carga se adapta a tu rendimiento real. Si tu cuerpo no llega, el plan lo sabe antes de que te estanques.</p>
+          <h3>Progresión inteligente y autorregulada</h3>
+          <p>Olvídate de los esquemas rígidos. La aplicación analiza los datos de cada sesión para ajustar dinámicamente tu programación. El entrenamiento se adapta a ti, y no al revés.</p>
         </div>
         <div class="app-feature">
-          <h3>Descargas cuando tocan</h3>
-          <p>Programa las semanas de descarga en el momento adecuado para seguir progresando durante años, no semanas.</p>
+          <h3>Creada por y para gente que entrena de verdad</h3>
+          <p>Aquí no encontrarás interfaces recargadas ni distracciones visuales. TrueLift no se ha diseñado para ser “bonita”, sino para ser <strong>precisa, útil y robusta</strong>. Notarás la diferencia en cuanto registres tu primera serie.</p>
         </div>
+      </div>
+      <div class="app-access">
+        <h3>Entrena sin barreras</h3>
+        <ul>
+          <li><strong>Sin anuncios ni interrupciones:</strong> Tu concentración en el gimnasio es lo primero.</li>
+          <li><strong>Progresión gratuita:</strong> Elige tu rutina, registra tus entrenamientos y deja que la app gestione tu avance de forma gratuita.</li>
+          <li><strong>Prueba la versión PRO gratis durante 28 días:</strong> Lleva tus resultados al límite. Pruébala gratis, de verdad, <strong>sin registros obligatorios ni tarjetas de crédito</strong>.</li>
+        </ul>
       </div>
       <div class="app-actions">
         <a class="btn btn-lift" href="https://www.truelift.es" target="_blank" rel="noopener">Visitar truelift.es</a>
